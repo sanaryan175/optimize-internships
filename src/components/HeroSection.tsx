@@ -1,37 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Bot, Users, Building2, Shield, Zap, Target, TrendingUp, Badge } from "lucide-react";
-import indianStudents1 from "@/assets/indian-students-1.jpg";
-import indianStudents2 from "@/assets/indian-students-2.jpg";
-import indianStudents3 from "@/assets/indian-students-3.jpg";
+import heroStudents from "@/assets/hero-students.jpg";
 
 export const HeroSection = () => {
   return (
     <div className="relative overflow-hidden">
-      {/* Background images */}
+      {/* Hero background image */}
       <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-info/5 to-success/5" />
-        <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
-          <img 
-            src={indianStudents1} 
-            alt="Indian students studying" 
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute bottom-0 left-0 w-1/4 h-1/2 opacity-8">
-          <img 
-            src={indianStudents2} 
-            alt="Indian students in office" 
-            className="w-full h-full object-cover rounded-tr-3xl"
-          />
-        </div>
-        <div className="absolute top-1/4 right-1/4 w-1/5 h-1/3 opacity-6">
-          <img 
-            src={indianStudents3} 
-            alt="Indian graduates" 
-            className="w-full h-full object-cover rounded-2xl"
-          />
-        </div>
+        <img 
+          src={heroStudents} 
+          alt="Indian students on campus - PM Internship Scheme" 
+          className="w-full h-full object-cover"
+        />
+        {/* Dark gradient overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        {/* Subtle brand tint */}
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-success/10" />
       </div>
       
       {/* Hero content */}
@@ -41,7 +26,7 @@ export const HeroSection = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               {/* Government Badge */}
-              <div className="inline-flex items-center rounded-lg bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+              <div className="inline-flex items-center rounded-lg bg-white/95 backdrop-blur-sm px-4 py-2 text-sm font-medium text-primary border border-primary/30 shadow-lg">
                 <Shield className="h-4 w-4 mr-2" />
                 Ministry of Corporate Affairs | Government of India
               </div>
