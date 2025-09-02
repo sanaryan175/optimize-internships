@@ -1,12 +1,38 @@
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Bot, Users, Building2, Shield, Zap, Target, TrendingUp } from "lucide-react";
+import { ArrowRight, Bot, Users, Building2, Shield, Zap, Target, TrendingUp, Badge } from "lucide-react";
+import indianStudents1 from "@/assets/indian-students-1.jpg";
+import indianStudents2 from "@/assets/indian-students-2.jpg";
+import indianStudents3 from "@/assets/indian-students-3.jpg";
 
 export const HeroSection = () => {
   return (
     <div className="relative overflow-hidden">
-      {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-info/5 to-success/5" />
+      {/* Background images */}
+      <div className="absolute inset-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-info/5 to-success/5" />
+        <div className="absolute top-0 right-0 w-1/3 h-full opacity-10">
+          <img 
+            src={indianStudents1} 
+            alt="Indian students studying" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute bottom-0 left-0 w-1/4 h-1/2 opacity-8">
+          <img 
+            src={indianStudents2} 
+            alt="Indian students in office" 
+            className="w-full h-full object-cover rounded-tr-3xl"
+          />
+        </div>
+        <div className="absolute top-1/4 right-1/4 w-1/5 h-1/3 opacity-6">
+          <img 
+            src={indianStudents3} 
+            alt="Indian graduates" 
+            className="w-full h-full object-cover rounded-2xl"
+          />
+        </div>
+      </div>
       
       {/* Hero content */}
       <div className="relative container py-24 lg:py-32">
@@ -14,7 +40,13 @@ export const HeroSection = () => {
           {/* Left column - Text content */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <div className="inline-flex items-center rounded-lg bg-primary/10 px-3 py-1 text-sm font-medium text-primary">
+              {/* Government Badge */}
+              <div className="inline-flex items-center rounded-lg bg-primary/10 px-4 py-2 text-sm font-medium text-primary border border-primary/20">
+                <Shield className="h-4 w-4 mr-2" />
+                Ministry of Corporate Affairs | Government of India
+              </div>
+              
+              <div className="inline-flex items-center rounded-lg bg-secondary/10 px-3 py-1 text-sm font-medium text-secondary">
                 <Bot className="h-4 w-4 mr-2" />
                 AI-Powered Matching Engine
               </div>
